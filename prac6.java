@@ -4,18 +4,18 @@ public class prac6 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int num = scanner.nextInt();
-        if(num % 2 == 0) {
-            System.out.println("Not Prime");
+        boolean isPrime = true;
+        for (int i = 2; i < num; i++) {
+            if (num % i == 0) {
+                isPrime = false;
+                break;
+                }
+            }
+            if (isPrime) {
+                System.out.print("Prime");
+            } else {
+                System.out.print("Not Prime");
+            }
+            scanner.close();
         }
-        else if (num % 3 == 0) {
-            System.out.println("Not Prime");
-        }
-        else if (num % 5 == 0) {
-            System.out.println("Not Prime");
-        }
-        else {
-            System.out.println("Prime");
-        }
-        scanner.close();
-}
 }
