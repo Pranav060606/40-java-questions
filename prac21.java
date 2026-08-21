@@ -1,29 +1,26 @@
 package startedjava;
 import java.util.*;
-public class prac20 {
+public class prac21 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
+        String result = "";
         for (int i = 0; i < input.length(); i++) {
             char currentChar = input.charAt(i);
             
-            // To prevent counting the same letter twice, we check if it appeared earlier
             if (input.indexOf(currentChar) == i) {
-                
-                // Count how many times this specific character appears
                 int count = 0;
                 for (int j = 0; j < input.length(); j++) {
                     if (input.charAt(j) == currentChar) {
                         count++;
                     }
                 }
-                if (count > 1) {
-                    // Print the result for this character
-                    System.out.println("Duplicate character: '" + currentChar + "' appears " + count + " times");
+                if (count == 1) {
+                    result+= currentChar;
                 }
+                System.out.println("Strinng after removing duplicates : " + result);
         }
         sc.close();
     }
 }
 }
-
