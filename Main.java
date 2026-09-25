@@ -2,7 +2,7 @@
 package startedjava;
 class Main {
     public static void main(String[] args) {
-        int n = 6;
+        int n = 27;
         int num = n + 1;
 
         while (true) {
@@ -23,6 +23,7 @@ class Main {
 
             if (prime) {
              System.out.println(num);
+             break;
             }
 
             num++;
